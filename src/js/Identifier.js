@@ -47,7 +47,7 @@ export default class CardIdentifier {
     let companyName;
 
     if (!algorithmPassed) {
-      console.error('Error: Luhn algorithm check failed!'); // eslint-disable-line no-console
+      console.error('Проверка алгоритма не удалась'); // eslint-disable-line no-console
     } else {
       let firstDigits = digits.splice(0, String(this.biggestFirstDigits).length).join('');
 
@@ -61,7 +61,7 @@ export default class CardIdentifier {
     }
 
     if (algorithmPassed && !companyName) {
-      console.error('Error: Pay system doesn\'t supported!'); // eslint-disable-line no-console
+      console.error('Платежная система не поддерживается'); // eslint-disable-line no-console
     }
 
     return companyName;
